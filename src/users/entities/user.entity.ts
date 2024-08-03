@@ -5,10 +5,10 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column('text')
+  @Column()
   firstName: string;
 
-  @Column('text')
+  @Column()
   lastName: string;
 
   @Column('int')
@@ -17,12 +17,12 @@ export class User {
   @Column('int')
   weight: number;
 
-  @Column('text')
+  @Column()
   gender: string;
 
-  @Column('text')
+  @Column()
   residence: string;
 
-  @Column('text')
-  photo: string;
+  @Column({ nullable: true })
+  photo?: string;
 }
