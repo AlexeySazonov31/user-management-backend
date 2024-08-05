@@ -1,3 +1,46 @@
+# Manageuser Backend
+
+This is the backend for the Manageuser application, built with [NestJS](https://github.com/nestjs/nest).
+
+## Links
+
+- **React Native App:** [User Management Frontend](https://github.com/AlexeySazonov31/user-management-app)
+- **Public API:** [Manage User API](https://manageuser-back.sasdev.space/users)
+
+## API Endpoints
+
+### Get All Users
+
+`GET /users`  
+Retrieve all users.
+
+### Get Users with Pagination
+
+`GET /users?page=<page>&pageSize=<pageSize>`  
+Retrieve users with pagination. Default page is 1, default pageSize is 10.
+
+### Get User by ID
+
+`GET /users/:id`  
+Retrieve a user by ID.
+
+### Create User
+
+`POST /users`  
+Create a new user.
+
+### Update User
+
+`PATCH /users/:id`  
+Update a user by ID.
+
+### Delete User
+
+`DELETE /users/:id`  
+Delete a user by ID.
+
+---
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
