@@ -18,8 +18,8 @@ async function bootstrap() {
   const port = configService.get('PORT');
 
   await app
-    .listen(port || 3000)
-    .then(() => console.log('running on: ' + port || 3000))
+    .listen(port || 8082)
+    .then(() => console.log('running on: ' + port || 8082))
     .catch((err) => console.log(err));
 }
 

@@ -19,6 +19,7 @@ import { User } from './users/entities/user.entity';
         database: ConfigService.get('DB_NAME'),
         entities: [User],
         synchronize: true,
+        autoLoadEntities: true,
       }),
     }),
     UsersModule,

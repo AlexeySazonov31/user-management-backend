@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    container_name: postgres-manageuser-db
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-manageuser-app
+    environment:
+      - PORT=${PORT}
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - '8082:8082'
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app/src
